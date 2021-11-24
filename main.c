@@ -75,10 +75,8 @@ int main()
 				printf("\n==== OPTION ====\n");
 				printf("\n1)-Ordre Accendant  (Date de creation)\n");
 				printf("2)-Ordre Descendant (Date de creation)\n");
-				printf("3)-Ordre Accendant  (Lexical des Noms)\n");
-				printf("4)-Ordre Descendant (Lexical des Noms)\n");
-				printf("5)-Ordre Accendant  (Montant)\n");
-				printf("6)-Ordre Descendant (Montant)\n");
+				printf("3)-Ordre Accendant  (Montant)\n");
+				printf("4)-Ordre Descendant (Montant)\n");
 				
 				printf("\nEntrez une option : ");
 				scanf("%d",&choixo);
@@ -89,10 +87,8 @@ int main()
 				{
 					case 1:Afficher(B);break;
 					case 2:AfficherInverse(B);break;
-					case 3:Afficher(TrieBankLEXICAL(B));break;
-					case 4:AfficherInverse(TrieBankLEXICAL(B));break;
-					case 5:printf("Donnez le montant minimal : ");scanf("%f",&A.Montant);Afficher(TrieBank(B,A.Montant));break;
-					case 6:printf("Donnez le montant minimal : ");scanf("%f",&A.Montant);AfficherInverse(TrieBank(B,A.Montant));break;
+					case 3:printf("Donnez le montant minimal : ");scanf("%f",&A.Montant);Afficher(TrieBank(B,A.Montant));break;
+					case 4:printf("Donnez le montant minimal : ");scanf("%f",&A.Montant);AfficherInverse(TrieBank(B,A.Montant));break;
 					default:printf("Option non disponible !!\n");break;
 				}
 				

@@ -219,51 +219,10 @@ void Fidialise(Bank **B)
 	{
 		if(strcmp(i,tmp->A.CIN)==0 || strcmp(j,tmp->A.CIN)==0 || strcmp(z,tmp->A.CIN)==0)
 		{
-			(*B)->A.Montant*=1.3;
+			tmp->A.Montant*=1.3;
 		}
 		tmp=tmp->next;
 	}
-}
-
-//////////////////////////////////////////////////////////
-
-void AddWithLexi(Bank **B,BankAcc A)
-{
-	Bank *n;
-	
-	if(*B==NULL)
-	{
-		n=(Bank*)malloc(sizeof(Bank));
-		n->A=A;
-		n->next=NULL;
-		*B=n;
-	}
-	else if(strcmp((*B)->A.Nom,A.Nom)==-1)
-	{
-		n=(Bank*)malloc(sizeof(Bank));
-		n->A=A;
-		n->next=*B;
-		*B=n;
-	}
-	else
-	{
-		AddWithLexi(&((*B)->next),A);
-	}
-}
-
-//////////////////////////////////////////////////////////
-
-Bank* TrieBankLEXICAL(Bank *B)
-{
-	Bank *R=creeBank();
-	
-	while(B!=NULL)
-	{
-		AddWithLexi(&R,B->A);
-		B=B->next;
-	}
-	
-	return R;
 }
 
 //////////////////////////////////////////////////////////
