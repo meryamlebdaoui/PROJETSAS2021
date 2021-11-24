@@ -42,8 +42,6 @@ void FindTopTree(char i[10],char j[10],char z[10],Bank *B);
 void Fidialise(Bank **B);
 
 //OTHERS :
-void AddWithLexi(Bank **B,BankAcc A);
-Bank* TrieBankLEXICAL(Bank *B);
 int Deposer(Bank **B,char CIN[10],float m);
 int Retraiter(Bank **B,char CIN[10],float m);
 
